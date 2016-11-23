@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-QV-bF8" customClass="KolodaView" customModule="Koloda">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="369" id="Gj2-ua-c3v"/>
+                                    <constraint firstAttribute="width" constant="343" id="iby-oB-EXH"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRF-Hg-B6h">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="GOm-Xo-cut"/>
+                                    <constraint firstAttribute="width" constant="44" id="fB8-tE-blw"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_skip_normal"/>
+                                <connections>
+                                    <action selector="leftBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WeX-Mm-dk4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-FL-exF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="HbW-Ms-dE1"/>
+                                    <constraint firstAttribute="height" constant="32" id="aVQ-fr-bO0"/>
+                                </constraints>
+                                <state key="normal" title="Undo">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNw-jG-njA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTT-Dm-7qX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="f6X-IL-Nqn"/>
+                                    <constraint firstAttribute="width" constant="44" id="heq-7P-0jX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_like_pressed"/>
+                                <connections>
+                                    <action selector="rightBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P81-mR-mFR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="VRF-Hg-B6h" secondAttribute="leading" id="EKE-c8-ODg"/>
+                            <constraint firstItem="UTT-Dm-7qX" firstAttribute="leading" secondItem="VRF-Hg-B6h" secondAttribute="trailing" constant="105" id="EOj-Yv-oxO"/>
+                            <constraint firstItem="4kW-QV-bF8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NkY-ru-If1"/>
+                            <constraint firstItem="UTT-Dm-7qX" firstAttribute="top" secondItem="4kW-QV-bF8" secondAttribute="bottom" constant="32" id="Q5A-6B-csx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pJI-FL-exF" secondAttribute="trailing" id="U2U-y4-1Ek"/>
+                            <constraint firstItem="pJI-FL-exF" firstAttribute="top" secondItem="4kW-QV-bF8" secondAttribute="bottom" constant="32" id="VFn-Yx-pyj"/>
+                            <constraint firstItem="pJI-FL-exF" firstAttribute="leading" secondItem="UTT-Dm-7qX" secondAttribute="trailing" constant="85" id="fzp-al-8aC"/>
+                            <constraint firstAttribute="trailing" secondItem="4kW-QV-bF8" secondAttribute="trailing" constant="16" id="prt-bB-LC4"/>
+                            <constraint firstItem="4kW-QV-bF8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="raf-VY-hco"/>
+                            <constraint firstItem="VRF-Hg-B6h" firstAttribute="top" secondItem="4kW-QV-bF8" secondAttribute="bottom" constant="32" id="sT0-jm-0zS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="4kW-QV-bF8" id="srS-No-aZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.39999999999998" y="-14.842578710644679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_like_pressed" width="32" height="32"/>
+        <image name="btn_skip_normal" width="32" height="32"/>
+    </resources>
+</document>
